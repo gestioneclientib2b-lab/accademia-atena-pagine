@@ -103,10 +103,6 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '2272721193177851');
 fbq('track', 'PageView');
 fbq('track', 'Lead');   // iscrizione al webinar completata
-try{                                          // test A/B dell'opt-in: conversione per variante
-  var _ab=localStorage.getItem('ab_dic_v1');
-  if(_ab==='A'||_ab==='B')fbq('trackCustom','LeadLP_'+_ab);
-}catch(e){}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2272721193177851&ev=PageView&noscript=1"/></noscript>
@@ -199,7 +195,7 @@ src="https://www.facebook.com/tr?id=2272721193177851&ev=PageView&noscript=1"/></
 
 <script>
 /* ---------- CONFIG: unici valori da cambiare (Pietro) ---------- */
-var NOME_EVENTO    = "Più autonomia, meno stress";                 // nome del webinar (provvisorio: cambiarlo anche nel testo della pagina)
+var NOME_EVENTO    = "Più autonomia, meno stress";                 // nome del webinar (confermato 08/11/2026)
 var WHATSAPP_URL   = "#";                                          // [DA INSERIRE] invito al gruppo WhatsApp del 1/12
 var VIDEO_URL      = "";                                           // [DA INSERIRE] video del messaggio di Andrea (riprese 11/11). Vuoto = blocco nascosto
 /* --------------------------------------------------------------- */

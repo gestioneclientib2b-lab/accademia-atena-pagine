@@ -214,7 +214,7 @@ footer .dis{max-width:760px;margin:14px auto 0;font-size:11.5px;color:#7C7C7C}
   <p class="sub">Il problema non è quanto studia: è <b>come</b> studia. Ci mette un pomeriggio intero, oppure rende solo quando si impegna, oppure va bene perché la sera ripassi tu con lui. I voti arrivano, ma <b>a un prezzo che non torna</b>.</p>
 
   <div class="heroimg">
-    <img src="https://assets.cdn.filesafe.space/rUQ46usnAv1X2RShKuRu/media/6a79f62022e1e17a2b1bdbb7.jpg" alt="Studenti di Accademia Atena">
+    <img src="assets/hero-studenti.jpg" alt="Studenti di Accademia Atena">
   </div>
 
   <div class="when">Martedì 1 Dicembre ore 21:00</div>
@@ -372,10 +372,7 @@ footer .dis{max-width:760px;margin:14px auto 0;font-size:11.5px;color:#7C7C7C}
 /* ---------- CONFIG: unici valori da cambiare ---------- */
 var TY_URL      = "grazie/";         // thank you page
 var WEBHOOK     = "https://services.leadconnectorhq.com/hooks/rUQ46usnAv1X2RShKuRu/webhook-trigger/8zoYWGoHbbNNH6Uigv1L";   // workflow Squad «Dicembre - MASTER - Ingresso Webinar 1 dicembre»
-var VARIANTE    = "A";  // test A/B: "A" landing storica, "B" variante grafica
 /* ------------------------------------------------------ */
-
-try{localStorage.setItem('ab_dic_v1',VARIANTE);}catch(e){}
 
 (function(){
   /* ---- modal ---- */
@@ -404,7 +401,7 @@ try{localStorage.setItem('ab_dic_v1',VARIANTE);}catch(e){}
     btn.textContent='Un attimo…';btn.disabled=true;
 
     var data={nome:n.value.trim(),email:e.value.trim(),telefono:t.value.trim(),
-      evento:'webinar-1dic2026',fonte:'landing-old-'+VARIANTE};
+      evento:'webinar-1dic2026',fonte:'landing-old-A'};
 
     var fatto=false;
     function avanti(){if(fatto)return;fatto=true;location.href=TY_URL;}
