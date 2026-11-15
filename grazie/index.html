@@ -196,8 +196,8 @@ src="https://www.facebook.com/tr?id=2272721193177851&ev=PageView&noscript=1"/></
 <script>
 /* ---------- CONFIG: unici valori da cambiare (Pietro) ---------- */
 var NOME_EVENTO    = "Più autonomia, meno stress";                 // nome del webinar (confermato 08/11/2026)
-var WHATSAPP_URL   = "#";                                          // [DA INSERIRE] invito al gruppo WhatsApp del 1/12
-var VIDEO_URL      = "";                                           // [DA INSERIRE] video del messaggio di Andrea (riprese 11/11). Vuoto = blocco nascosto
+var WHATSAPP_URL   = "https://webinar.accademiaatena.it/whatsapp/";  // link FISSO: porta al gruppo attivo (si cambia solo in whatsapp/index.html)
+var VIDEO_URL      = "/assets/video/messaggio-andrea-dicembre.mp4"; // messaggio di Andrea (15/11, 720p 9,6 MB). Vuoto = blocco nascosto
 /* --------------------------------------------------------------- */
 
 (function(){
@@ -222,7 +222,7 @@ var VIDEO_URL      = "";                                           // [DA INSERI
   /* ---- messaggio di Andrea ---- */
   var box=document.getElementById('andrea'),v=document.getElementById('vandrea'),b=document.getElementById('unmute'),vb=document.getElementById('vbox');
   if(VIDEO_URL){
-    box.hidden=false; v.src=VIDEO_URL;
+    box.hidden=false; v.poster=VIDEO_URL.replace(/\.mp4$/,'.jpg'); v.src=VIDEO_URL;
     var attivo=false;
     function riprendi(){if(document.hidden)return;var p=v.play();if(p&&p.catch)p.catch(function(){});}
     if('IntersectionObserver' in window){
