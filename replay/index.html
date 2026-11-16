@@ -623,7 +623,9 @@ var REVIEWS=[
       var btn=form.querySelector('button[type="submit"]');btn.textContent='Un attimo…';btn.disabled=true;
       if(window.fbq)fbq('track','SubmitApplication');
 
-      var payload={nome_genitore:g.value.trim(),nome_figlio:f.value.trim(),email:e.value.trim(),
+      /* nome e cognome separati per Squad (saluto delle email) */
+      var parti=g.value.trim().split(/\s+/).map(function(p){return p.charAt(0).toUpperCase()+p.slice(1)});
+      var payload={nome_genitore:g.value.trim(),nome_proprio:parti[0],cognome:parti.slice(1).join(' '),nome_figlio:f.value.trim(),email:e.value.trim(),
         telefono:t.value.trim(),classe:c.value,
         evento:'piu-autonomia-1dic2026',fonte:'replay-dicembre'};
 
