@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diretta · Più autonomia, meno stress · Accademia Atena</title>
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Più autonomia, meno stress · la diretta">
+<meta property="og:description" content="Martedì 1 dicembre alle 21:00 con Andrea Muzii. Entra da qui.">
+<meta property="og:image" content="https://webinar.accademiaatena.it/assets/video/messaggio-andrea-dicembre.jpg">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+<script>
+/* =====================================================================
+   LINK DELLA DIRETTA (WebinarJam): si incolla qui sotto, tra le
+   virgolette, e si ricarica questo file su GitHub. Nient'altro.
+   Email C1-C3 e WhatsApp W2-W3 puntano sempre a
+   https://webinar.accademiaatena.it/diretta/ e non si toccano.
+   Finché il link è vuoto, la pagina mostra il messaggio di attesa.
+   ===================================================================== */
+var DIRETTA = "";
+if (DIRETTA) { location.replace(DIRETTA); }
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#FFFFFF;color:#1A2035;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:24px 16px;box-sizing:border-box}
+  .box{max-width:440px}
+  img{height:44px;margin-bottom:24px}
+  h1{font-size:22px;line-height:1.3;margin:0 0 12px}
+  p{font-size:17px;line-height:1.5;margin:0 0 22px}
+  a.btn{display:inline-block;background:#F5A623;color:#1A2035;text-decoration:none;font-weight:700;font-size:17px;padding:15px 26px;border-radius:12px}
+  #attesa,#vai-box{display:none}
+</style>
+</head>
+<body>
+  <div class="box">
+    <img src="../assets/logo-atena.png" alt="Accademia Atena">
+    <div id="vai-box">
+      <p>Ti sto portando nella diretta.<br>Se non si apre da sola, tocca il pulsante.</p>
+      <a class="btn" id="vai" href="#">Entra nella diretta</a>
+    </div>
+    <div id="attesa">
+      <h1>Più autonomia, meno stress</h1>
+      <p>La diretta con Andrea Muzii è martedì 1 dicembre alle 21:00.<br>Il link si attiva qui la sera stessa: salva questa pagina e torna martedì.</p>
+    </div>
+  </div>
+  <script>
+    if (DIRETTA) { document.getElementById('vai').href = DIRETTA; document.getElementById('vai-box').style.display = 'block'; }
+    else { document.getElementById('attesa').style.display = 'block'; }
+  </script>
+</body>
+</html>
