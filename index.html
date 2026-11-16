@@ -400,7 +400,10 @@ var WEBHOOK     = "https://services.leadconnectorhq.com/hooks/rUQ46usnAv1X2RShKu
     var btn=ev.target.querySelector('button[type="submit"]');
     btn.textContent='Un attimo…';btn.disabled=true;
 
-    var data={nome:n.value.trim(),email:e.value.trim(),telefono:t.value.trim(),
+    /* «Nome e cognome» in un solo campo: in Squad il nome va da solo (saluto delle email), il cognome a parte */
+    var parti=n.value.trim().split(/\s+/).map(function(p){return p.charAt(0).toUpperCase()+p.slice(1)});
+    var data={nome:n.value.trim(),nome_proprio:parti[0],cognome:parti.slice(1).join(' '),
+      email:e.value.trim(),telefono:t.value.trim(),
       evento:'webinar-1dic2026',fonte:'landing-old-A'};
 
     var fatto=false;
